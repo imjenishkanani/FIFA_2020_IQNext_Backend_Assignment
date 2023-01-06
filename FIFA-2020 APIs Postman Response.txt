@@ -1,0 +1,358 @@
+Que: Apart from the specified technology, which technology can be used to achieve the same and can be much easier to implement.
+Answer: Node.js [NPM - Node Package Manager]
+
+-----------------------------------------------------------------------------------
+				Postman : FIFA-2022 Response
+-----------------------------------------------------------------------------------
+1. Player's statistics data
+-----------------------------------------------------------------------------------
+Method : GET
+Name : return all players' statistics data
+Route-1 : http://localhost:9191/fifa/api/v1/statistics/get-all-details
+Respose : [
+    {
+        "id": 1,
+        "player": "Aaron Mooy",
+        "position": "MF",
+        "team": "Australia",
+        "age": "32-087",
+        "club": "Celtic",
+        "birthYear": 1990,
+        "games": 4,
+        "gamesStarts": 4,
+        "minutes": 360,
+        "minutes90S": 4.0,
+        "goals": 0,
+        "assists": 0,
+        "goalsPens": 0,
+        "pensMade": 0,
+        "pensAtt": 0,
+        "cardsYellow": 1,
+        "cardsRed": 0,
+        "goalsPer90": 0.0,
+        "assistsPer90": 0.0,
+        "goalsAssistsPer90": 0.0,
+        "goalsPensPer90": 0.0,
+        "goalsAssistsPensPer90": 0.0,
+        "xg": 0.0,
+        "npxg": 0.0,
+        "xgAssist": 0.1,
+        "npxgXgAssist": 0.1,
+        "xgPer90": 0.01,
+        "xgAssistPer90": 0.02,
+        "xgXgAssistPer90": 0.03,
+        "npxgPer90": 0.01,
+        "npxgXgAssistPer90": 0.03
+    },
+    {
+        "id": 2,
+        "player": "Aaron Ramsey",
+        "position": "MF",
+        "team": "Wales",
+        "age": "31-350",
+        "club": "Nice",
+        "birthYear": 1990,
+        "games": 3,
+        "gamesStarts": 3,
+        "minutes": 266,
+        "minutes90S": 3.0,
+        "goals": 0,
+        "assists": 0,
+        "goalsPens": 0,
+        "pensMade": 0,
+        "pensAtt": 0,
+        "cardsYellow": 1,
+        "cardsRed": 0,
+        "goalsPer90": 0.0,
+        "assistsPer90": 0.0,
+        "goalsAssistsPer90": 0.0,
+        "goalsPensPer90": 0.0,
+        "goalsAssistsPensPer90": 0.0,
+        "xg": 0.0,
+        "npxg": 0.0,
+        "xgAssist": 0.0,
+        "npxgXgAssist": 0.1,
+        "xgPer90": 0.01,
+        "xgAssistPer90": 0.01,
+        "xgXgAssistPer90": 0.02,
+        "npxgPer90": 0.01,
+        "npxgXgAssistPer90": 0.02
+    },
+   .......
+}
+
+--------------------------------------------------------------------------
+Method : GET
+Name : return players' statistics data based on ID
+Route-2 : http://localhost:9191/fifa/api/v1/statistics/1
+Response : 
+{
+    "id": 1,
+    "player": "Aaron Mooy",
+    "position": "MF",
+    "team": "Australia",
+    "age": "32-087",
+    "club": "Celtic",
+    "birthYear": 1990,
+    "games": 4,
+    "gamesStarts": 4,
+    "minutes": 360,
+    "minutes90S": 4.0,
+    "goals": 0,
+    "assists": 0,
+    "goalsPens": 0,
+    "pensMade": 0,
+    "pensAtt": 0,
+    "cardsYellow": 1,
+    "cardsRed": 0,
+    "goalsPer90": 0.0,
+    "assistsPer90": 0.0,
+    "goalsAssistsPer90": 0.0,
+    "goalsPensPer90": 0.0,
+    "goalsAssistsPensPer90": 0.0,
+    "xg": 0.0,
+    "npxg": 0.0,
+    "xgAssist": 0.1,
+    "npxgXgAssist": 0.1,
+    "xgPer90": 0.01,
+    "xgAssistPer90": 0.02,
+    "xgXgAssistPer90": 0.03,
+    "npxgPer90": 0.01,
+    "npxgXgAssistPer90": 0.03
+}
+------------------------------------------------------------------------------
+Method : POST
+Name : return all Player's statistics based on filter request
+Route-3 : http://localhost:9191/fifa/api/v1/statistics/apply-filter
+Request Body :
+	{
+    		"games":5,
+    		"minutes":388,
+    		"goals":1,
+    		"birthYear":1995
+	}
+
+Response : 
+[
+    {
+        "id": 17,
+        "player": "Adrien Rabiot",
+        "position": "MF",
+        "team": "France",
+        "age": "27-252",
+        "club": "Juventus",
+        "birthYear": 1995,
+        "games": 5,
+        "gamesStarts": 4,
+        "minutes": 388,
+        "minutes90S": 4.3,
+        "goals": 1,
+        "assists": 1,
+        "goalsPens": 1,
+        "pensMade": 0,
+        "pensAtt": 0,
+        "cardsYellow": 0,
+        "cardsRed": 0,
+        "goalsPer90": 0.23,
+        "assistsPer90": 0.23,
+        "goalsAssistsPer90": 0.46,
+        "goalsPensPer90": 0.23,
+        "goalsAssistsPensPer90": 0.46,
+        "xg": 1.0,
+        "npxg": 1.0,
+        "xgAssist": 0.9,
+        "npxgXgAssist": 1.9,
+        "xgPer90": 0.23,
+        "xgAssistPer90": 0.2,
+        "xgXgAssistPer90": 0.43,
+        "npxgPer90": 0.23,
+        "npxgXgAssistPer90": 0.43
+    }
+]
+
+
+
+-----------------------------------------------------------------------------------
+2. Player's defense data
+-----------------------------------------------------------------------------------
+Method : GET
+Name : return all players' defense data
+Route-1 : http://localhost:9191/fifa/api/v1/defense/get-all-details
+Respose :
+[
+    {
+        "id": 1,
+        "player": "Aaron Mooy",
+        "position": "MF",
+        "team": "Australia",
+        "age": "32-087",
+        "birthYear": 1990,
+        "minutes90S": 4.0,
+        "tackles": 9,
+        "tacklesWon": 6,
+        "tacklesDef3Rd": 4,
+        "tacklesMid3Rd": 4,
+        "tacklesAtt3Rd": 1,
+        "dribbleTackles": 6,
+        "dribblesVs": 8,
+        "dribbleTacklesPct": 75.0,
+        "dribbledPast": 2,
+        "blocks": 6,
+        "blockedShots": 4,
+        "blockedPasses": 2,
+        "interceptions": 3,
+        "tacklesInterceptions": 12,
+        "clearances": 9,
+        "errors": 0
+    },
+    {
+        "id": 2,
+        "player": "Aaron Ramsey",
+        "position": "MF",
+        "team": "Wales",
+        "age": "31-350",
+        "birthYear": 1990,
+        "minutes90S": 3.0,
+        "tackles": 2,
+        "tacklesWon": 0,
+        "tacklesDef3Rd": 0,
+        "tacklesMid3Rd": 2,
+        "tacklesAtt3Rd": 0,
+        "dribbleTackles": 0,
+        "dribblesVs": 2,
+        "dribbleTacklesPct": 0.0,
+        "dribbledPast": 2,
+        "blocks": 4,
+        "blockedShots": 1,
+        "blockedPasses": 3,
+        "interceptions": 0,
+        "tacklesInterceptions": 2,
+        "clearances": 2,
+        "errors": 1
+    },
+    .......
+]
+
+-----------------------------------------------------------------------------------
+Method : GET
+Name : return players' defense data based on ID
+Route-2 : http://localhost:9191/fifa/api/v1/defense/9
+Response : 
+{
+    "id": 9,
+    "player": "Abdulaziz Hatem",
+    "position": "MF",
+    "team": "Qatar",
+    "age": "32-044",
+    "birthYear": 1990,
+    "minutes90S": 2.2,
+    "tackles": 1,
+    "tacklesWon": 1,
+    "tacklesDef3Rd": 0,
+    "tacklesMid3Rd": 0,
+    "tacklesAtt3Rd": 1,
+    "dribbleTackles": 1,
+    "dribblesVs": 2,
+    "dribbleTacklesPct": 50.0,
+    "dribbledPast": 1,
+    "blocks": 0,
+    "blockedShots": 0,
+    "blockedPasses": 0,
+    "interceptions": 1,
+    "tacklesInterceptions": 2,
+    "clearances": 0,
+    "errors": 0
+}
+
+----------------------------------------------------------------------------------------
+Method : POST
+Name : return all Player's defense data based on filter request
+Route-3 : http://localhost:9191/fifa/api/v1/defense/apply-filter
+Request Body :
+	{
+    		"position":"FW",
+    		"team":"Denmark",
+    		"tackles":0,
+    		"tacklesWon":0
+	}
+
+Response : 
+[
+    {
+        "id": 50,
+        "player": "Andreas Cornelius",
+        "position": "FW",
+        "team": "Denmark",
+        "age": "29-270",
+        "birthYear": 1993,
+        "minutes90S": 1.0,
+        "tackles": 0,
+        "tacklesWon": 0,
+        "tacklesDef3Rd": 0,
+        "tacklesMid3Rd": 0,
+        "tacklesAtt3Rd": 0,
+        "dribbleTackles": 0,
+        "dribblesVs": 0,
+        "dribbleTacklesPct": null,
+        "dribbledPast": 0,
+        "blocks": 0,
+        "blockedShots": 0,
+        "blockedPasses": 0,
+        "interceptions": 0,
+        "tacklesInterceptions": 0,
+        "clearances": 1,
+        "errors": 0
+    },
+    {
+        "id": 51,
+        "player": "Andreas Skov Olsen",
+        "position": "FW",
+        "team": "Denmark",
+        "age": "22-347",
+        "birthYear": 1999,
+        "minutes90S": 1.5,
+        "tackles": 0,
+        "tacklesWon": 0,
+        "tacklesDef3Rd": 0,
+        "tacklesMid3Rd": 0,
+        "tacklesAtt3Rd": 0,
+        "dribbleTackles": 0,
+        "dribblesVs": 1,
+        "dribbleTacklesPct": 0.0,
+        "dribbledPast": 1,
+        "blocks": 3,
+        "blockedShots": 1,
+        "blockedPasses": 2,
+        "interceptions": 1,
+        "tacklesInterceptions": 1,
+        "clearances": 0,
+        "errors": 0
+    },
+    {
+        "id": 412,
+        "player": "Martin Braithwaite",
+        "position": "FW",
+        "team": "Denmark",
+        "age": "31-189",
+        "birthYear": 1991,
+        "minutes90S": 1.1,
+        "tackles": 0,
+        "tacklesWon": 0,
+        "tacklesDef3Rd": 0,
+        "tacklesMid3Rd": 0,
+        "tacklesAtt3Rd": 0,
+        "dribbleTackles": 0,
+        "dribblesVs": 0,
+        "dribbleTacklesPct": null,
+        "dribbledPast": 0,
+        "blocks": 0,
+        "blockedShots": 0,
+        "blockedPasses": 0,
+        "interceptions": 0,
+        "tacklesInterceptions": 0,
+        "clearances": 0,
+        "errors": 0
+    }
+]
+----------------------------------------------------------------------------------------------
+
